@@ -1,0 +1,72 @@
+<html>
+<head>
+<link href="../styles/frontend.css" rel="stylesheet" type="text/css">
+<script src="../scripts/frontend.js"></script>
+</head>
+<body>
+<div class="btn-group">
+    <button class="btn btn-default myFakeClass dropdown-toggle" data-toggle="dropdown">More Actions <span class="caret"></span></button>
+    <div class="dropdown-menu" style="width:320px">
+
+        <div class="col-sm-12" style="padding:5px 0">
+            <label class="col-sm-7">List type</label>
+            <div class="col-sm-5">
+            <select name="list-type">
+                <option>SKU</option>
+                <option>Flex1</option>
+            </select>
+            </div>
+        </div>
+        <div class="col-sm-12" style="padding:5px 0">
+            <label class="control-label col-sm-7">Change product type</label>
+            <div class="col-sm-5">
+            <select name="list-type">
+                <option value='product'>Product Page</option>
+                <option value='cart'>Cart Rescue</option>
+                <!--<option value='generic'>Generic</option> NET-9742 Backend should fix the generic list support-->
+            </select>
+            </div>
+        </div>
+        <div class="col-sm-12" style="padding:5px 0">
+            <label class="control-label col-sm-7">Permanently delete list</label>
+            <div class="col-sm-5">
+            <button onclick='businessAdmin.deleteBox(this)' class='btn btn-danger'>Delete List</button>
+            </div>
+        </div>
+        <div class="col-sm-12" style="padding:5px 0">
+            <label class="control-label col-sm-7">Permanently clear list</label>
+            <div class="col-sm-5">
+            <button onclick='businessAdmin.deleteBox(this)' class='btn btn-danger'>Clear List</button>
+            </div>
+        </div>
+    <!--
+      <ul>
+
+        -->
+        <!--
+
+        <li class='form-group'>
+            <label class="control-label col-sm-2">Permanently delete list</label>
+            <button onclick='businessAdmin.deleteBox(this)' class='list-btn important'>Delete List</button>
+        </li>
+        <li class='form-group'>
+            <label class="control-label col-sm-2">Permanently clear list items</label>
+            <button onclick='businessAdmin.clearList(this)' class='list-btn important'>Clear List</button>
+        </li>
+        -->
+    </div>
+</div>
+<script type="text/javascript">
+$("select").click(function(event){
+    event.stopPropagation();
+    // alert("The select element was clicked.");
+    console.log($(this).val())
+});
+
+$('.dropdown-menu').mouseleave(function () {
+    $(".myFakeClass").dropdown('toggle');
+});
+</script>
+
+
+</body>

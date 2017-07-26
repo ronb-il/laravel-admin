@@ -1,0 +1,48 @@
+#date-selection {
+    width:240px;
+}
+
+#report-container {
+    margin-top: 10px;
+    position: relative;
+}
+
+#tableauVizImage {
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 8px;
+    padding-top: 8px;
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+#tableauVizImage.transparent {
+    opacity: 0;
+}
+
+#tableauVizImage img {
+    visibility: visible;
+    width: 100%;
+}
+
+#tableauViz {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+}
+
+#report-preloader-image {
+    position: fixed;
+    z-index: 9999;
+    top: 10px;
+    left: 210px;
+}

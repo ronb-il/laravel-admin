@@ -1,0 +1,66 @@
+<project name="cockpit" default="dist" basedir=".">
+    <description>cockpit build file</description>
+    <!-- set global properties for this build -->
+    <!-- remark test -->
+    <property name="dist" location="dist" />
+    <property name="build" location="build/rpm" />
+    <property name="spec" value="cockpit.spec" />
+    <property environment="env" />
+    <property name="version" value="${env.BUILD_VERSION}"/>
+    <property name="release" value="${env.BUILD_RELEASE}"/>
+
+    <!-- *************init************* -->
+    <target name="init">
+        <tstamp />
+        <echo message="build id: [${version}-${release}]" />
+    </target>
+    
+    <target name="test">
+        <exec executable="/usr/local/bin/composer">
+            <arg value="test" />
+        </exec>
+    </target>
+
+
+    <target name="build">
+        <exec executable="/usr/local/bin/composer">
+            <arg value="install" />
+        </exec>
+    </target>
+
+    <!-- *************default create package target****************** -->
+    <target name="dist" description="generate the distribution" depends="clean,build,test,init">
+        <!-- Create the distribution directory -->
+        <mkdir dir="${dist}" />
+        <mkdir dir="${build}" />
+        <mkdir dir="${build}/BUILD" />
+        <mkdir dir="${build}/SOURCES" />
+        <mkdir dir="${build}/RPMS/noarch" />
+        <mkdir dir="${build}/SPECS" />
+        <!-- prepare rpm spec file in build structure -->
+        <replace file="${spec}" token="@@version@@" value="${version}" />
+        <replace file="${spec}" token="@@release@@" value="${release}" />
+        <copy file="${spec}" todir="${build}/SPECS" failonerror="true" />
+        <copy todir="${build}/BUILD/cockpit-${version}-${release}" preservelastmodified="true" failonerror="true">
+            <fileset dir="." includes="**">
+                <exclude name="build.xml"/>
+                <exclude name="${spec}" />
+                <exclude name=".idea" />
+                <exclude name="**/.vagrant/**" />
+                <exclude name="**/vagrant/**" />
+                <exclude name="Vagrantfile" />
+                <exclude name="vagrant_ansible_inventory_default" />
+                <exclude name="_ide_helper_models.php" />
+                <exclude name="_ide_helper.php" />
+            </fileset>
+        </copy>
+
+        <rpm specFile="${spec}" topDir="${build}" cleanBuildDir="true" failOnError="true" command="-ba -v" />
+    </target>
+
+    <target name="clean" description="clean up">
+        <!-- Delete the ${build} and ${dist} directory trees -->
+        <delete dir="${dist}" />
+        <delete dir="${build}" />
+    </target>
+</project>

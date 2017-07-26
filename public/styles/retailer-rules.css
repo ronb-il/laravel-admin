@@ -1,0 +1,150 @@
+.active-rules tr.view-mode .cancel.rules-button{
+	display:none;
+}
+.active-rules tr.edit-mode.new-rule-mode .cancel.rules-button{
+	display:none;
+}
+.active-rules tr.view-mode .delete.rules-button{
+	display:none;
+}
+.active-rules tr.view-mode .save.rules-button{
+	display:none;
+}
+.active-rules tr.edit-mode .edit.rules-button{
+	display:none;
+}
+
+.active-rules td .name{
+	margin-right: 5px;
+}
+
+.active-rules td .rules-button
+{
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.active-rules td .rules-button.delete
+{
+	color: red;
+}
+
+.active-rules .rule-container td{
+	vertical-align: top;
+	padding: 5px;
+}
+
+.active-rules.inclusions .column-c{
+	width:10%;
+}
+
+.active-rules.exclusions .column-b{
+	width: 10%;
+}
+
+.active-rules.exclusions textarea{
+	width:25%;
+}
+
+.active-rules td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    vertical-align: middle;
+    height: 30px;
+    padding-left:8px;
+}
+
+.active-rules th {
+    border-width: 1px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+	height: 30px;
+	padding-left:8px;
+}
+
+.publish-disclaimer{
+	color:red;
+}
+
+.business-rules-admin .bra-header.disabled{
+	background-color:#df0404;
+}
+
+.business-rules-admin .bra-header.enabled{
+	background-color:#85B449;
+}
+
+.business-rules-admin .bra-header{
+	
+	height: 30px;
+	margin: 20px 0 30px 0;
+	padding-top: 15px;
+}
+
+.business-rules-admin .bra-header .title{
+	float: left;
+	padding: 0;
+	margin: 0 40px 0 10px;
+	font-weight: normal;
+}
+
+.business-rules-admin .bra-header .controls .control-disabled{
+	margin-left:15px;
+}
+
+.business-rules-admin .bra-header .controls input{
+	vertical-align: text-top;
+}
+
+.business-rules-admin .upper-section .exclusions-title, 
+.business-rules-admin .upper-section .exclusions-subtitle,
+.business-rules-admin .upper-section .inclusions-title, 
+.business-rules-admin .upper-section .inclusions-subtitle{
+	float:left;
+	margin:0 0 10px 0;
+	padding:0;
+}
+
+.business-rules-admin .upper-section .exclusions-title,
+.business-rules-admin .upper-section .inclusions-title{
+	margin-right:15px;
+}
+
+.business-rules-admin .add-new-rule-button-container{
+	background-color:#F5E9A2;
+}
+
+.business-rules-admin .upper-section .add-new-rule-button-container .exclusions-add{
+	margin-left:10px;
+}
+
+.business-rules-admin .add-new-rule-button-container .inclusions-add,
+.business-rules-admin .add-new-rule-button-container .exclusions-add{
+	margin-left:10px;
+	vertical-align: bottom;
+}
+
+.business-rules-admin .upper-section .add-new-rule-button-container .inclusions-selection{
+	margin-left:10px;
+}
+
+.business-rules-admin textarea{
+	resize:both;
+	height:20px;
+	width:50%;
+}
+
+.business-rules-admin .active-rules.exclusions span,
+.business-rules-admin .active-rules.inclusions span{
+	vertical-align: -webkit-baseline-middle;
+	word-break: break-word;
+}
+
+.business-rules-admin .active-rules.exclusions span.name,
+.business-rules-admin .active-rules.inclusions span.name{
+	text-transform: capitalize;
+}
+

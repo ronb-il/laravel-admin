@@ -1,0 +1,127 @@
+#header {
+    display: none;
+}
+
+#footer{
+    display:none;
+}
+    
+a{
+	font-weight: bold;
+	text-decoration: none;
+    color: black;
+}
+.ctrl-panel{
+	display:none;
+}
+
+.offer .heading.cf{
+	min-height: 22px;
+}
+
+#offers-table{
+	border:1px solid black;
+	width:984px;
+}
+
+.thead.cf{
+	width:982px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: solid;
+	background-color: #CDCDCD !important;;
+}
+
+.selected-deals{
+	list-style: none;
+}
+
+.selected-deals li{
+	width: 894px;
+}
+.selected-deals .checkout-started{
+	background-color: #CDCDCD !important;
+	border: dashed 2px black;
+}
+
+.mark-purchased{
+	display:none;
+}
+
+.offer-id{
+	margin-left: 20px;
+    float: left;
+}
+
+.product{
+	margin-left: 256px;
+	width: 100px;
+	position: absolute;
+}
+.status{
+	margin-left: 573px;
+    position: absolute;
+}
+.date{
+	margin-left: 809px;
+}
+
+.action{
+float: left;
+margin-left: 118px;
+width: 205px;
+}
+
+.action img{
+	display:none;
+}
+
+.link{
+float: left;
+margin-left: 201px;
+}
+
+div.descr {
+    margin-left: 250px;
+    position: relative;
+    top: -130px;
+}
+
+.offer-info.cf .deal-staus{
+	float: right;
+	position: relative;
+	top: -32px;
+	left: -18px;
+	font-weight: bold;
+}
+.pending-offers{
+	text-align:center;
+}
+.deadline{
+	width: 230px;
+	left: 815px;
+	margin-right: 20px;
+	position: absolute;
+}
+
+.mark-as-purchased{
+	display:none;
+}
+
+
+.offer-info.cf .img{
+	margin: 20px;
+	border: solid 1px gray;
+	width:100px;
+}
+
+.selected-deals{
+	clear: both;
+	border-top: solid 1px gray;
+	min-height: 252px;
+}
+
+.offer-info.cf{
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+}

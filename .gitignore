@@ -1,0 +1,9 @@
+/.env
+/config/env
+/vendor
+/node_modules
+/public/components
+.vagrant
+/.idea
+/public/reportscache
+/vagrant
